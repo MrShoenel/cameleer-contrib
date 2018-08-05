@@ -1,22 +1,25 @@
-const { ClassLoader } = require('./lib/ClassLoader')
+const { ClassLoader } = require('./lib/tools/ClassLoader')
 , path = require('path')
 , taskDirectory = path.resolve(path.join(path.dirname(__filename), './lib/tasks'))
 , managerDirectory = path.resolve(path.join(path.dirname(__filename), './lib/managers'))
 , controllerDirectory = path.resolve(path.join(path.dirname(__filename), './lib/controllers'))
-, getTaskLoader = BaseTask => {
-  return new ClassLoader(BaseTask, taskDirectory);
+, getTaskLoader = cameleerNs => {
+  return new ClassLoader(taskDirectory, cameleerNs);
 }
-, getManagerLoader = BaseManager => {
-  return new ClassLoader(BaseManager, managerDirectory);
+, getManagerLoader = cameleerNs => {
+  return new ClassLoader(managerDirectory, cameleerNs);
 }
-, getControllerLoader = BaseController => {
-  return new ClassLoader(BaseController, controllerDirectory);
-};
+, getControllerLoader = cameleerNs => {
+  return new ClassLoader(controllerDirectory, cameleerNs);
+}
+, { macRegex, wakeAsync} = require('./lib/tools/WakeOnLan');
 
 
 module.exports = Object.freeze({
   ClassLoader,
   getTaskLoader,
   getManagerLoader,
-  getControllerLoader
+  getControllerLoader,
+
+  macRegex, wakeAsync
 });
