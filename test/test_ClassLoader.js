@@ -1,19 +1,18 @@
-const { chai, assert } = require('mocha')
-, { ClassLoader } = require('../lib/ClassLoader')
-, path = require('path');
+const { assert } = require('chai')
+, { ClassLoader } = require('../lib/tools/ClassLoader')
+, path = require('path')
+, cameleerNs = require('cameleer');
 
 
 describe('TaskClassLoader', function() {
   it('should load all classes in a directory', async() => {
-    class BaseTask {};
-
     const directory = path.resolve(path.join(path.dirname(__filename), '../lib/tasks'));
-    const cl = new ClassLoader(BaseTask, directory);
+    const cl = new ClassLoader(directory, cameleerNs);
 
-    const classes = await cl.loadAllAsync();
+    const classMap = cl.loadAll();
 
-    classes.forEach(clazz => {
-      assert.isTrue(clazz.prototype instanceof BaseTask);
+    [...classMap.values()].forEach(F => {
+      assert.isTrue(F instanceof Function);
     });
   });
 });
