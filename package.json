@@ -1,6 +1,6 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
   "directories": {
@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/MrShoenel/cameleer-contrib#readme",
   "devDependencies": {
-    "cameleer": "^0.14.3",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   },
   "dependencies": {
+    "cameleer": "^0.14.3",
     "fs-extra": "^7.0.0",
     "joi": "^13.5.2",
     "recursive-copy": "^2.0.9",
