@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- <link rel="stylesheet" href="./css/style.css" />
+    <link href="./css/favicon.ico" rel="icon" type="image/x-icon" /> -->
+    
+    <script src="../bower_components/angular/angular.min.js"></script>
+    
+		<title>Cameleer Controller - Angular Web Simple</title>
+  </head>
+
+  <body>
+    <div ng-controller="Ctrl as vm">
+      <h4 ng-if="vm.isReady" ng-cloak>Ready!</h4>
+      <h4 ng-if="!vm.isReady" ng-cloak>Setting things up..</h4>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

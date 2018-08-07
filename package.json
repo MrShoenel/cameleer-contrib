@@ -1,14 +1,18 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.3.1",
+  "version": "0.4.0-prerelease",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
+  "subPackages": [
+    "lib/managers/angular-web-simple"
+  ],
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "postinstall": "subpkg install"
   },
   "repository": {
     "type": "git",
@@ -38,6 +42,7 @@
     "joi": "^13.5.2",
     "recursive-copy": "^2.0.9",
     "sh.orchestration-tools": "^2.12.0",
+    "subpackage": "^1.1.0",
     "wakeonlan": "^0.1.0"
   }
 }
