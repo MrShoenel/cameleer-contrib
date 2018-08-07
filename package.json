@@ -3,6 +3,9 @@
   "version": "0.3.1",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
+  "subPackages": [
+    "lib/managers/angular-web-simple"
+  ],
   "directories": {
     "lib": "lib",
     "test": "test"
