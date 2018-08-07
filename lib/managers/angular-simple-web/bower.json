@@ -1,5 +1,5 @@
 {
-  "name": "angular-web-simple",
+  "name": "angular-simple-web",
   "description": "A simple web-manager for Cameleer using the old angular.js.",
   "main": "index.js",
   "authors": [

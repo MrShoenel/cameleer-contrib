@@ -1,10 +1,10 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.4.0-prerelease",
+  "version": "0.4.1-prerelease",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
   "subPackages": [
-    "lib/managers/angular-web-simple"
+    "lib/managers/angular-simple-web"
   ],
   "directories": {
     "lib": "lib",
