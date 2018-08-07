@@ -28,3 +28,14 @@
  * @typedef SevenZipTaskConfig
  * @type {TaskConfig|SevenZipTaskBase}
  */
+
+/**
+ * @typedef AngularSimpleWebConfigBase
+ * @type {Object}
+ * @property {number|(() => number|Promise.<number>)} port The HTTP-port to run the application on.
+ */
+
+/**
+ * @typedef AngularSimpleWebConfig
+ * @type {ManagerConfig|AngularSimpleWebConfigBase}
+ */
