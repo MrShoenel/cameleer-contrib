@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/MrShoenel/cameleer-contrib#readme",
   "devDependencies": {
-    "cameleer": "^0.15.1",
+    "cameleer": "^0.16.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   },
