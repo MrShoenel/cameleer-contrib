@@ -33,6 +33,7 @@
  * @typedef AngularSimpleWebConfigBase
  * @type {Object}
  * @property {number|(() => number|Promise.<number>)} port The HTTP-port to run the application on.
+ * @property {boolean} [openBrowser] Optional. Defaults to false. Whether or not to open the browser once the manager is initialized.
  */
 
 /**
