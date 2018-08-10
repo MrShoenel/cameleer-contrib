@@ -40,3 +40,84 @@
  * @typedef AngularSimpleWebConfig
  * @type {ManagerConfig|AngularSimpleWebConfigBase}
  */
+
+/**
+ * @typedef JobNumericProgressInfo
+ * @type {Object}
+ * @property {number} min
+ * @property {number} max
+ * @property {number} last
+ * @property {number} range
+ */
+
+/**
+ * @typedef JobInfo
+ * @type {Object}
+ * @property {number} cost
+ * @property {boolean} hasCost
+ * @property {boolean} hasFailed
+ * @property {boolean} isDone
+ * @property {boolean} isRunning
+ * @property {boolean} supportsProgress
+ * @property {null|JobNumericProgressInfo} progressInfo
+ */
+
+/**
+ * @typedef JobInfoAgg
+ * @type {Object}
+ * @property {number} qty Number of jobs aggregated in this info
+ * @property {number} totalCost
+ * @property {number} numFailed
+ * @property {number} numDone
+ * @property {number} numRunning
+ * @property {number} avgProgress
+ */
+
+/**
+ * @typedef QueueInfoJobs
+ * @type {Object}
+ * @property {Array.<JobInfo>} infos
+ * @property {JobInfoAgg} agg
+ */
+
+/**
+ * @typedef QueueInfo
+ * @type {Object}
+ * @property {CameleerQueueConfig} config
+ * @property {boolean} isDefault
+ * @property {boolean} isParallel
+ * @property {string} name
+ */
+
+/**
+ * @typedef QueueInfoComplete
+ * @type {Object}
+ * @property {QueueInfo} info
+ * @property {{ all: QueueInfoJobs, current: QueueInfoJobs, backlog: QueueInfoJobs }} jobs
+ * @property {number} backlog
+ * @property {number|null} backlogCost null for parallel-queues
+ * @property {number|null} capabilities null for parallel-queues
+ * @property {number|null} capabilitiesFree null for parallel-queues
+ * @property {number|null} capabilitiesUsed null for parallel-queues
+ * @property {boolean} isBusy
+ * @property {boolean} isIdle
+ * @property {boolean} isPaused
+ * @property {boolean} isWorking
+ * @property {number} load
+ * @property {number} utilization
+ * @property {number} numJobsDone
+ * @property {number} numJobsFailed
+ * @property {number} numJobsRunning
+ * @property {number|null} numParallel null for cost-queues
+ * @property {number} workDone
+ * @property {number} workFailed
+ */
+
+/**
+ * @typedef TaskInfo
+ * @type {Object}
+ * @property {string} type
+ * @property {string} name
+ * @property {string} scheduleType
+ * @property {boolean} allowTrigger
+ */
