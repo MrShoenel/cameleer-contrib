@@ -1,11 +1,17 @@
-const { SevenZipTaskResolvedConfig, SevenZipTask, SevenZipTaskConfigSchema } = require('./lib/tasks/7ZipTask')
-, { AngularSimpleWebManager, AngularSimpleWebManagerSchema } = require('./lib/managers/angular-simple-web')
+const { CameleerQueueObserver } = require('./lib/extras/CameleerQueueObserver')
+, { CronSchedule } = require('./lib/extras/CronSchedule')
+, { AngularSimpleWebManager, AngularSimpleWebManagerSchema
+  } = require('./lib/managers/angular-simple-web')
+, { SevenZipTaskResolvedConfig, SevenZipTask, SevenZipTaskConfigSchema
+  } = require('./lib/tasks/7ZipTask')
 , { macRegex, wakeAsync} = require('./lib/tools/WakeOnLan');
 
 
-module.exports = Object.freeze({
-  SevenZipTaskResolvedConfig, SevenZipTask, SevenZipTaskConfigSchema,
-  AngularSimpleWebManager, AngularSimpleWebManagerSchema,
 
+module.exports = Object.freeze({
+  CameleerQueueObserver,
+  CronSchedule,
+  AngularSimpleWebManager, AngularSimpleWebManagerSchema,
+  SevenZipTaskResolvedConfig, SevenZipTask, SevenZipTaskConfigSchema,
   macRegex, wakeAsync
 });
