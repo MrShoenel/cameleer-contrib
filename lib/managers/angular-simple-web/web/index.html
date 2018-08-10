@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- <link rel="stylesheet" href="./css/style.css" />
-    <link href="./css/favicon.ico" rel="icon" type="image/x-icon" /> -->
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <!-- <link href="./css/favicon.ico" rel="icon" type="image/x-icon" /> -->
     
     <script src="../bower_components/angular/angular.min.js"></script>
     
 		<title>Cameleer Controller - Angular Web Simple</title>
   </head>
 
-  <body>
-    <div ng-controller="Ctrl as vm">
-      <h4 ng-if="vm.isReady" ng-cloak>Ready!</h4>
-      <h4 ng-if="!vm.isReady" ng-cloak>Setting things up..</h4>
-    </div>
+  <body ng-controller="Ctrl as vm">
+    <h1>Angular Simple Web Manager for Cameleer</h1>
 
-    <script src="./main.js"></script>
+    <fieldset>
+      <label>
+        <h2>Queues</h2>
+      </label>
+      <ul id="queues-wrapper">
+        <li ng-repeat="q in vm.queues">
+          <div>
+            <h3>{{ q.info.name }} ({{ q.info.isParallel ? 'parallel' : 'capabilities' }})</h3>
+            Utilization ({{ q.utilization | percentage }}):
+            <meter optimum="0" min="0" max="1" value="{{ q.utilization }}" low="0.2" high="0.8"></meter>
+            <ul class="props">
+              <li><code>Load:</code> {{ q.load | percentage }}</li>
+              <li><code>enabled:</code> {{ q.info.config.enabled }}</li>
+              <li><code>type:</code> {{ q.info.config.type }}</li>
+              <li><code>Backlog:</code> {{ q.backlog }}</li>
+              <li ng-if="!q.info.isParallel"><code>BacklogCost:</code> {{ q.backlogCost | number:2 }}</li>
+              <li ng-if="!q.info.isParallel"><code>Capabilities:</code> {{ q.capabilities | number:2 }}</li>
+              <li ng-if="!q.info.isParallel"><code>CapabilitiesFree:</code> {{ q.capabilitiesFree | number:2 }}</li>
+              <li ng-if="!q.info.isParallel"><code>CapabilitiesUsed:</code> {{ q.capabilitiesUsed | number:2 }}</li>
+              <li ng-if="!q.info.isParallel"><code>allowExclusiveJobs:</code> {{ q.info.config.allowExclusiveJobs }}</li>
+              <li ng-if="q.info.isParallel"><code>numParallel:</code> {{ q.numParallel }}</li>
+              <li><code>isBusy:</code> {{ q.isBusy }}</li>
+              <li><code>isIdle:</code> {{ q.isIdle }}</li>
+              <li><code>isPaused:</code> {{ q.isPaused }}</li>
+              <li><code>isWorking:</code> {{ q.isWorking }}</li>
+              <li><code>numJobsDone:</code> {{ q.numJobsDone }}</li>
+              <li><code>numJobsFailed:</code> {{ q.numJobsFailed }}</li>
+              <li><code>numJobsRunning:</code> {{ q.numJobsRunning }}</li>
+            </ul>
+          </div>
+        </li>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label>
+        <h2>Tasks</h2>
+      </label>
+
+      <ul id="task-wrapper">
+        <li ng-repeat="t in vm.tasks">
+          <div>
+            <h3>{{ t.name }}</h3>
+            <ul class="props">
+              <li><code>Type:</code> {{ t.type }}</li>
+              <li><code>Schedule:</code> {{ t.scheduleType }}</li>
+              <li ng-if="t.allowTrigger">
+                <button ng-click="vm.enqueue(t);">Enqueue Task</button>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <label>
+        <h2>Log</h2>
+      </label>
+      
+      <!-- <button ng-click="vm.loadAllLogEntries();">Load all entries</button> -->
+      <div id="log-wrapper">
+        <pre ng-repeat="msg in vm.logMessages" class="loglevel-{{ msg.level }}">{{ msg.asString }}</pre>
+      </div>
+    </fieldset>
+
+    <script src="../node_modules/less/dist/less.min.js"></script>
+    <script src="../node_modules/browser-es-module-loader/dist/babel-browser-build.js"></script>
+    <script src="../node_modules/browser-es-module-loader/dist/browser-es-module-loader.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
