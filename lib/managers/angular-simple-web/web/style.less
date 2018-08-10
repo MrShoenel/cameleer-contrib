@@ -1,0 +1,157 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  margin: 0 0 1ex;
+}
+
+fieldset {
+  display: block;
+  margin: 2em 0 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+div#log-wrapper {
+
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  pre {
+    margin: 0;
+    padding: .5ex;
+    display: block;
+    white-space: pre-wrap;
+    background-color: black;
+    
+    font-weight: 900;
+    font-size: 110%;
+    /*
+    Trace: 0,
+    Debug: 1,
+    Information: 2,
+    Warning: 3,
+    Error: 4,
+    Critical: 5,
+    None: 6
+    */
+
+    &.loglevel-0 {
+      color: gray;
+    }
+    &.loglevel-1 {
+      color: green;
+    }
+    &.loglevel-2 {
+      color: white;
+    }
+    &.loglevel-3 {
+      color: goldenrod;
+    }
+    &.loglevel-4 {
+      color: crimson;
+    }
+    &.loglevel-5 {
+      color: mediumpurple;
+    }
+
+    &:nth-child(odd) {
+      background-color: #1b1b1b;
+    }
+  }
+}
+
+
+ul#queues-wrapper {
+  columns: 3;
+  list-style-type: none;
+  display: block;
+  padding: 0;
+
+  &>li {
+    display: block;
+    padding: .5em 1ex;
+    background-color: lightgoldenrodyellow;
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    break-inside: avoid-column; 
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    div {
+      meter {
+        display: block;
+        width: 66.66%;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+ul.props {
+  padding: 0;
+  list-style-type: none;
+  columns: 3;
+  margin-top: 1em;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+
+  >li {
+    code {
+      font-weight: 900;
+    }
+  }
+}
+
+ul#task-wrapper {
+  columns: 5;
+  list-style-type: none;
+  display: block;
+  padding: 0;
+
+  li {
+    background-color: lightblue;
+    display: block;
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    break-inside: avoid-column;
+    padding: 0.5em 1ex;
+
+    div h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  ul#queues-wrapper, ul.props {
+    columns: 2;
+  }
+  ul#task-wrapper {
+    columns: 3;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  ul#queues-wrapper, ul.props {
+    columns: 1;
+  }
+  meter {
+    width: 100% !important;
+  }
+  ul#task-wrapper {
+    columns: 2;
+  }
+}
