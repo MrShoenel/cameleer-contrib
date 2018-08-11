@@ -1,6 +1,6 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
   "subPackages": [
@@ -33,17 +33,17 @@
   },
   "homepage": "https://github.com/MrShoenel/cameleer-contrib#readme",
   "devDependencies": {
-    "cameleer": "^1.0.1",
+    "cameleer": "^1.3.1",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   },
   "dependencies": {
     "fs-extra": "^7.0.0",
-    "joi": "^13.5.2",
+    "joi": "^13.6.0",
     "node-schedule": "^1.3.0",
     "recursive-copy": "^2.0.9",
     "request-promise": "^4.2.2",
-    "sh.orchestration-tools": "^2.14.1",
+    "sh.orchestration-tools": "^2.14.2",
     "subpackage": "^1.1.0",
     "wakeonlan": "^0.1.0"
   }
