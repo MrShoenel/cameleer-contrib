@@ -22,6 +22,9 @@ This list shows all current features of this package.
     * Emits events in JSON-format and comes with/exports extensive `typedef`s.
   * __CronSchedule__:
     * A _ManualSchedule_ for Cameleer that build on `node-schedule` and thus allows to schedule Tasks via cron!
+  * __UrlCalendar__:
+    * A sub-class of `Calendar` that can directly be constructed from a URL.
+    * Supports any options that `request-promise` supports and forwards them (e.g. post- or authenticated requests).
 * __Tasks__:
   * __7ZipTask__:
     * A specialized task that runs `7z`-processes to compress files. It automatically creates all necessary functional tasks, based on its configuration. Extra `typedef`s and schemas are exported.
