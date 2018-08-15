@@ -32,13 +32,27 @@
 /**
  * @typedef AngularSimpleWebConfigBase
  * @type {Object}
- * @property {number|(() => number|Promise.<number>)} port The HTTP-port to run the application on.
+ * @property {number} port The HTTP-port to run the application on.
  * @property {boolean} [openBrowser] Optional. Defaults to false. Whether or not to open the browser once the manager is initialized.
  */
 
 /**
  * @typedef AngularSimpleWebConfig
  * @type {ManagerConfig|AngularSimpleWebConfigBase}
+ */
+
+/**
+ * @typedef TrayNotifierConfigBase
+ * @type {Object}
+ * @property {boolean} [playSounds] Optional. Defaults to false. If true, the operating system's sound for notifications will be played.
+ * @property {boolean} [queueEvents] Optional. Defaults to false. Whether or not to show notifications for queue events.
+ * @property {boolean} [notifyWork] Optional. Defaults to true. Whether or not to show notifications for when Cameleer is enqueueing, running, finishing or failing work.
+ * @property {boolean} [notifyLog] Optional. Defaults to false. Whether or not to show notifications for every log entry.
+ */
+
+/**
+ * @typedef TrayNotifierConfig
+ * @type {ManagerConfig|TrayNotifierConfigBase}
  */
 
 /**

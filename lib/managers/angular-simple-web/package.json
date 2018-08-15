@@ -13,7 +13,7 @@
   "author": "Sebastian Hönel <development@hoenel.net>",
   "license": "MIT",
   "devDependencies": {
-    "@types/angular": "^1.6.49",
+    "@types/angular": "^1.6.50",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",

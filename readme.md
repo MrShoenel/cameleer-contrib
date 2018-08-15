@@ -9,13 +9,16 @@ Note that this packages ___must be___ installed _alongside_ `Cameleer`, because 
 # List of current features
 This list shows all current features of this package.
 
-* __Controllers__:
-  * _&lt;none so far&gt;_; however, Cameleer comes with two built-in controllers. Please contribute yours!
 * __Managers__:
-  * __angular-simple-web__:
+  * __AngularSimpleWeb__:
     * An angularjs-based web-manager for cameleer that shows its log, queues and tasks and currently allows for tasks with manual schedule to trigger them.
     * This manager comes with its own express-server and supports web-sockets. `typedef`s and extended `schemas` are to be found in meta.
     * This manager is still in an early stage and will get more features and better UI soon.
+  * __TrayNotifier__:
+    * A manager that observes Cameleer, its queues and its logs for messages and posts them to the system's tray, cross-platform, thanks to `node-notifier`.
+    * Configurable: Configure sounds and which events to monitor (work, the log, the queues). Also shows messages when idle or shutting down.
+* __Controllers__:
+  * _&lt;none so far&gt;_; however, Cameleer comes with two built-in controllers. Please contribute yours!
 * __Extras__:
   * __CameleerQueueObserver__:
     * A class that can encapsulate a `CameleerQueue` and monitor all of its properties, its status, jobs, utilization etc.
