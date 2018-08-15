@@ -1,10 +1,11 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.6.8",
+  "version": "0.7.0",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
   "subPackages": [
-    "lib/managers/angular-simple-web"
+    "lib/managers/angular-simple-web",
+    "lib/managers/tray-notifier"
   ],
   "directories": {
     "lib": "lib",
@@ -39,11 +40,11 @@
   },
   "dependencies": {
     "fs-extra": "^7.0.0",
-    "ical.js": "^1.2.2",
     "joi": "^13.6.0",
     "node-schedule": "^1.3.0",
     "recursive-copy": "^2.0.9",
     "request-promise": "^4.2.2",
+    "sh.log-client": "^2.10.0",
     "sh.orchestration-tools": "^2.15.3",
     "subpackage": "^1.1.0",
     "wakeonlan": "^0.1.0"

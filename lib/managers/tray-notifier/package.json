@@ -1,0 +1,18 @@
+{
+  "name": "tray-notifier",
+  "version": "1.0.0",
+  "description": "A cross-platform tray notifier for Cameleer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Cameleer",
+    "Manager"
+  ],
+  "author": "Sebastian Hönel <development@hoenel.net>",
+  "license": "MIT",
+  "dependencies": {
+    "node-notifier": "^5.2.1"
+  }
+}
