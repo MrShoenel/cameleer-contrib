@@ -33,6 +33,10 @@ describe('7ZipTask', function() {
       enabled: true,
       type: SevenZipTask,
       schedule: new ManualSchedule(),
+      skip: async(rro, task) => {
+        assert.isTrue(task instanceof SevenZipTask);
+        return false;
+      },
       name: 'Foo',
       sevenZip: 'a',
       src: 'a',
