@@ -34,10 +34,11 @@
   },
   "homepage": "https://github.com/MrShoenel/cameleer-contrib#readme",
   "devDependencies": {
-    "cameleer": "1.5.2",
+    "cameleer": "1.5.3",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
-    "rxjs": "^6.2.2"
+    "rxjs": "^6.2.2",
+    "sh.orchestration-tools": "^2.17.0"
   },
   "dependencies": {
     "fs-extra": "^7.0.0",
@@ -46,7 +47,6 @@
     "recursive-copy": "^2.0.9",
     "request-promise": "^4.2.2",
     "sh.log-client": "^2.10.0",
-    "sh.orchestration-tools": "^2.16.0",
     "subpackage": "^1.1.0",
     "wakeonlan": "^0.1.0"
   }
