@@ -1,6 +1,6 @@
 {
   "name": "sh.cameleer-contrib",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "A package with additional Task-types, Controllers/Managers and various extensions for Cameleer.",
   "main": "index.js",
   "subPackages": [
