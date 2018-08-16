@@ -21,6 +21,7 @@
  * @property {boolean|((rro: ResolvedResolveObject, task: Task) => boolean|Promise.<boolean>)} [mkdirpDstFolder] Optional. Defaults to true. Whether or not to try to recursively create the destination directory before running the backup.
  * @property {boolean|((rro: ResolvedResolveObject, task: Task) => boolean|Promise.<boolean>)} [emptyDstBefore] Optional. Defaults to false. Whether or not to empty the destination folder before running the backup.
  * @property {string|((rro: ResolvedResolveObject, task: Task) => string|Promise.<string>)} [password] Optional. Defaults to null.
+ * @property {boolean|((rro: ResolvedResolveObject, task: Task) => boolean|Promise.<boolean>)} [tolerateWarnings] Optional. Defaults to true. Whether or not it is ok to ignore warnings by 7z. The 7z process exits with code 1 in that case.
  * @property {Array.<string>|((rro: ResolvedResolveObject, task: Task) => Array.<string>|Promise.<Array.<string>>)} [sevenZipArgs] Optional. Defaults to [].
  * @property {SimpleTaskConfig|((rro: ResolvedResolveObject) => (SimpleTaskConfig|Promise.<SimpleTaskConfig>))} [tasksAfter] Optional. Defaults to an empty Array. The SevenZipTask creates all of its tasks automatically and prepends them to may existing tasks in the tasks-array. However, some tasks you may want to run afterwards. Those should be put in this array.
  */
