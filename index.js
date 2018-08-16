@@ -1,6 +1,8 @@
 const { CameleerQueueObserver } = require('./lib/extras/CameleerQueueObserver')
 , { CronSchedule } = require('./lib/extras/CronSchedule')
 , { UrlCalendar } = require('./lib/extras/UrlCalendar')
+, { MultiSchedule, MultiScheduler, symbolMultiSchedulerEvent
+  } = require('./lib/extras/MultiScheduler')
 , { AngularSimpleWebManager, AngularSimpleWebManagerSchema
   } = require('./lib/managers/angular-simple-web')
 , { TrayNotifierManager, TrayNotifierManagerSchema
@@ -15,6 +17,7 @@ module.exports = Object.freeze({
   CameleerQueueObserver,
   CronSchedule,
   UrlCalendar,
+  MultiSchedule, MultiScheduler, symbolMultiSchedulerEvent,
   AngularSimpleWebManager, AngularSimpleWebManagerSchema,
   TrayNotifierManager, TrayNotifierManagerSchema,
   SevenZipTaskResolvedConfig, SevenZipTask, SevenZipTaskConfigSchema,

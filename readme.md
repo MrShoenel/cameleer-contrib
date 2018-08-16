@@ -28,6 +28,9 @@ This list shows all current features of this package.
   * __UrlCalendar__:
     * A sub-class of `Calendar` that can directly be constructed from a URL.
     * Supports any options that `request-promise` supports and forwards them (e.g. post- or authenticated requests).
+  * __MultiScheduler__/__MultiSchedule__:
+    * A Scheduler and a Schedule that were made to merge many Schedulers/Schedules, no matter their type.
+    * Useful for Cameleer when a Task shall be run by different schedules (e.g. a Calendar and a ManualSchedule). The MultiSchedule itself is a ManualSchedule.
 * __Tasks__:
   * __7ZipTask__:
     * A specialized task that runs `7z`-processes to compress files. It automatically creates all necessary functional tasks, based on its configuration. Extra `typedef`s and schemas are exported.
