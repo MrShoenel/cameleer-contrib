@@ -22,6 +22,7 @@
  * @property {boolean|(() => boolean|Promise.<boolean>)} [emptyDstBefore] Optional. Defaults to false. Whether or not to empty the destination folder before running the backup.
  * @property {string|(() => string|Promise.<string>)} [password] Optional. Defaults to null.
  * @property {Array.<string>|(() => Array.<string>|Promise.<Array.<string>>)} [sevenZipArgs] Optional. Defaults to [].
+ * @property {SimpleTaskConfig|((rro: ResolvedResolveObject) => (SimpleTaskConfig|Promise.<SimpleTaskConfig>))} [tasksAfter] Optional. Defaults to an empty Array. The SevenZipTask creates all of its tasks automatically and prepends them to may existing tasks in the tasks-array. However, some tasks you may want to run afterwards. Those should be put in this array.
  */
 
 /**
